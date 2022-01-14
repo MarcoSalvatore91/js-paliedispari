@@ -24,17 +24,22 @@ console.log(cpuNumber)
 const result = userNumber + cpuNumber;
 console.log(result);
 
-let resultNumber;
-
-if (userNumber % 2 === 0) {
-    resultNumber = "E' pari"
-} else {
-    resultNumber = "E' dispari"
-}
-
-console.log(resultNumber);
+resultNumbers = evenOdd ();
+console.log(resultNumbers);
 
 function cpuNumbers () {
     const randomNumber = Math.floor(Math.random() * 5) + 1;
     return randomNumber;
+}
+
+function evenOdd () {
+    let resultNumber;
+    
+    if (userNumber % 2 === 0) {
+        resultNumber = "E' pari"
+    } else {
+        resultNumber = "E' dispari"
+    }
+
+    return resultNumber
 }
