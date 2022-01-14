@@ -12,3 +12,8 @@ Generiamo un numero random (sempre da 1 a 5) per il computer (usando una funzion
 Sommiamo i due numeri
 Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione)
 Dichiariamo chi ha vinto. */
+
+const userChoice = prompt('Scegli se pari o dispari', 'Pari').trim();
+console.log(userChoice);
+const userNumber = parseInt(prompt('Inserisci un numero da 1 a 5', '3'));
+console.log(userNumber);
