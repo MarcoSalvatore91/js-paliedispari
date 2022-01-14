@@ -5,15 +5,16 @@ console.log('JS OK!')
 /* Chiedere all’utente di inserire una parola
 Creare una funzione per capire se la parola inserita è palindroma */
 
-const addWord = prompt('Inserisici una parola', 'osso').trim();
+/* const addWord = prompt('Inserisici una parola', 'osso').trim();
 
 const newWord = reversWords(addWord);
-
 console.log(newWord);
+
+const result = palindrome(addWord, newWord);
 
 function reversWords (word) {
 
-    let reversWord;
+    let reversWord = '';
     for (i = word.length -1; i >= 0; i--)
     reversWord += word[i];
 
@@ -22,11 +23,11 @@ function reversWords (word) {
 
 function palindrome (firstWord, secondWord) {
     if (firstWord === secondWord) {
-        console.log(`Le parole ${firstWord} e ${secondWord} sono palindrome`)
+        console.log(`La parola ${firstWord} è palindrome`)
     } else {
-        console.log(`Le parole ${firstWord} e ${secondWord} non sono palindrome`)
+        console.log(`Le parole ${firstWord} non è palindrome`)
     }
-}
+} */
 
 // ! Traccia 2 (Pari e Dispari)
 
