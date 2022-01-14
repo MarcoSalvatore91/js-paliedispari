@@ -17,3 +17,24 @@ const userChoice = prompt('Scegli se pari o dispari', 'Pari').trim();
 console.log(userChoice);
 const userNumber = parseInt(prompt('Inserisci un numero da 1 a 5', '3'));
 console.log(userNumber);
+
+const cpuNumber = cpuNumbers();
+console.log(cpuNumber)
+
+const result = userNumber + cpuNumber;
+console.log(result);
+
+let resultNumber;
+
+if (userNumber % 2 === 0) {
+    resultNumber = "E' pari"
+} else {
+    resultNumber = "E' dispari"
+}
+
+console.log(resultNumber);
+
+function cpuNumbers () {
+    const randomNumber = Math.floor(Math.random() * 5) + 1;
+    return randomNumber;
+}
