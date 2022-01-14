@@ -5,6 +5,29 @@ console.log('JS OK!')
 /* Chiedere all’utente di inserire una parola
 Creare una funzione per capire se la parola inserita è palindroma */
 
+const addWord = prompt('Inserisici una parola', 'osso').trim();
+
+const newWord = reversWords(addWord);
+
+console.log(newWord);
+
+function reversWords (word) {
+
+    let reversWord;
+    for (i = word.length -1; i >= 0; i--)
+    reversWord += word[i];
+
+    return reversWord
+}
+
+function palindrome (firstWord, secondWord) {
+    if (firstWord === secondWord) {
+        console.log(`Le parole ${firstWord} e ${secondWord} sono palindrome`)
+    } else {
+        console.log(`Le parole ${firstWord} e ${secondWord} non sono palindrome`)
+    }
+}
+
 // ! Traccia 2 (Pari e Dispari)
 
 /* L’utente sceglie pari o dispari e inserisce un numero da 1 a 5.
@@ -13,33 +36,39 @@ Sommiamo i due numeri
 Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione)
 Dichiariamo chi ha vinto. */
 
-const userChoice = prompt('Scegli se pari o dispari', 'Pari').trim();
+/* const userChoice = prompt('Scegli se pari o dispari', 'pari').trim();
 console.log(userChoice);
-const userNumber = parseInt(prompt('Inserisci un numero da 1 a 5', '3'));
+
+let userNumber = parseInt(prompt('Inserisci un numero da 1 a 5', '3'));
+
+while (isNaN(userNumber)) {
+    userNumber = parseInt(prompt('Inserisci un numero da 1 a 5', '3'));
+}
+
 console.log(userNumber);
 
 const cpuNumber = cpuNumbers();
 console.log(cpuNumber)
 
-const result = userNumber + cpuNumber;
-console.log(result);
+const sum = userNumber + cpuNumber;
+console.log(sum);
 
-resultNumbers = evenOdd ();
+resultNumbers = evenOdd(sum);
 console.log(resultNumbers);
 
-function cpuNumbers () {
+function cpuNumbers() {
     const randomNumber = Math.floor(Math.random() * 5) + 1;
     return randomNumber;
 }
 
-function evenOdd () {
+function evenOdd (num1) {
     let resultNumber;
     
-    if (userNumber % 2 === 0) {
+    if (num1 % 2 === 0) {
         resultNumber = "E' pari"
     } else {
         resultNumber = "E' dispari"
     }
 
     return resultNumber
-}
+} */
