@@ -37,28 +37,42 @@ Sommiamo i due numeri
 Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione)
 Dichiariamo chi ha vinto. */
 
-/* const userChoice = prompt('Scegli se pari o dispari', 'pari').trim();
-console.log(userChoice);
+const sendForm = document.getElementById('send');
+const oddEven = document.getElementById('odd-even');
+const number = document.getElementById('number');
 
-let userNumber = parseInt(prompt('Inserisci un numero da 1 a 5', '3'));
+let resultNumber;
+let resultMatch;
 
-while (isNaN(userNumber)) {
-    userNumber = parseInt(prompt('Inserisci un numero da 1 a 5', '3'));
-}
+send.addEventListener('click', function() {
+    if (oddEven.value === 'pari' || oddEven.value === 'dispari') {
+    } else {
+        alert('Inserisci solo pari o dispari!')
+    }
+    if ((number.value <= 0) || (number.value > 5) || isNaN(number.value)) {
+        alert('Inserire numeri tra 1 e 5!')
+    } else {
+        console.log(number.value);
+    } 
 
-console.log(userNumber);
+    const cpuNumber = cpuNumbers(1, 5);
+    console.log(cpuNumber)
 
-const cpuNumber = cpuNumbers();
-console.log(cpuNumber)
+    const sum = parseInt(number.value) + cpuNumber;
+    console.log(sum);
 
-const sum = userNumber + cpuNumber;
-console.log(sum);
+    resultNumber = evenOdd(sum);
+    console.log(resultNumber);
 
-resultNumbers = evenOdd(sum);
-console.log(resultNumbers);
+    if (oddEven.value === evenOdd(sum)) {
+        console.log('Hai vinto!!!')
+    } else {
+        console.log('Hai perso!!!')
+    }
+})
 
-function cpuNumbers() {
-    const randomNumber = Math.floor(Math.random() * 5) + 1;
+function cpuNumbers(min, max) {
+    const randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
     return randomNumber;
 }
 
@@ -66,10 +80,10 @@ function evenOdd (num1) {
     let resultNumber;
     
     if (num1 % 2 === 0) {
-        resultNumber = "E' pari"
+        resultNumber = "pari"
     } else {
-        resultNumber = "E' dispari"
+        resultNumber = "dispari"
     }
 
     return resultNumber
-} */
+} 
