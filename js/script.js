@@ -5,14 +5,23 @@ console.log('JS OK!')
 /* Chiedere all’utente di inserire una parola
 Creare una funzione per capire se la parola inserita è palindroma */
 
-/* const addWord = prompt('Inserisici una parola', 'osso').trim();
+const word = document.getElementById('word');
+const send = document.getElementById('send');
+const wordResult = document.getElementById('word-result')
 
-const newWord = reversWords(addWord);
-console.log(newWord);
+/* const addWord = prompt('Inserisici una parola', 'osso').trim(); */
 
-const result = palindrome(addWord, newWord);
+let result;
 
-function reversWords (word) {
+send.addEventListener('click', function(){
+    
+    const newWord = reverseWords(word.value);
+    result = palindrome(word.value, newWord);
+    wordResult.innerHTML = result;
+    
+})
+
+function reverseWords (word) {
 
     let reversWord = '';
     for (i = word.length -1; i >= 0; i--)
@@ -22,12 +31,19 @@ function reversWords (word) {
 }
 
 function palindrome (firstWord, secondWord) {
+
+    let result;
+
     if (firstWord === secondWord) {
+        result = `La parola ${firstWord} è palindrome`;
         console.log(`La parola ${firstWord} è palindrome`)
     } else {
-        console.log(`Le parole ${firstWord} non è palindrome`)
+        result = `La parola ${firstWord} non è palindrome`;
+        console.log(`La parola ${firstWord} non è palindrome`)
     }
-} */
+
+    return palindrome
+} 
 
 // ! Traccia 2 (Pari e Dispari)
 
@@ -37,12 +53,13 @@ Sommiamo i due numeri
 Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione)
 Dichiariamo chi ha vinto. */
 
-const sendForm = document.getElementById('send');
+/* const sendForm = document.getElementById('send');
 const oddEven = document.getElementById('odd-even');
 const number = document.getElementById('number');
+const result = document.getElementById('result-match');
 
 let resultNumber;
-let resultMatch;
+let resultMatch = '';
 
 send.addEventListener('click', function() {
     if (oddEven.value === 'pari' || oddEven.value === 'dispari') {
@@ -65,12 +82,18 @@ send.addEventListener('click', function() {
     console.log(resultNumber);
 
     if (oddEven.value === evenOdd(sum)) {
+        resultMatch += 'Hai vinto!!!';
         console.log('Hai vinto!!!')
     } else {
-        console.log('Hai perso!!!')
+        resultMatch += 'Hai perso!';
+        console.log('Hai perso!')
     }
+
+    result.innerHTML = resultMatch;
 })
 
+
+// funtion
 function cpuNumbers(min, max) {
     const randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
     return randomNumber;
@@ -87,3 +110,4 @@ function evenOdd (num1) {
 
     return resultNumber
 } 
+ */
