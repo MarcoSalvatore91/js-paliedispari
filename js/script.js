@@ -9,8 +9,6 @@ const word = document.getElementById('word');
 const send = document.getElementById('send');
 const wordResult = document.getElementById('word-result')
 
-/* const addWord = prompt('Inserisici una parola', 'osso').trim(); */
-
 let result;
 
 send.addEventListener('click', function(){
@@ -42,7 +40,7 @@ function palindrome (firstWord, secondWord) {
         console.log(`La parola ${firstWord} non è palindrome`)
     }
 
-    return palindrome
+    return result
 } 
 
 // ! Traccia 2 (Pari e Dispari)
